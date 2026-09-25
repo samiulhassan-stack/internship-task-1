@@ -4,5 +4,5 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/internship-task-1/',
+  base: process.env.NODE_ENV === 'production' ? '/internship-task-1/' : '/',
 })
